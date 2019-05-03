@@ -14,14 +14,3 @@ def register_blueprints(app):
     app.register_blueprint(posts_bp_v2)
     app.register_blueprint(topics_bp_v2)
     app.register_blueprint(users_bp_v2)
-"""
-    # v3 API Endpoints
-    from kite.api.v3.posts import posts_bp_v3
-    from kite.api.v3.replies import replies_bp_v3
-    from kite.api.v3.topics import topics_bp_v3
-    
-    app.register_blueprint(replies_bp_v3)
-    app.register_blueprint(posts_bp_v3)
-    app.register_blueprint(topics_bp_v3)
-    app.register_blueprint(users_bp_v3)
-"""
