@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29B6F6</color>
+    <color name="colorPrimaryDark">#0086c3</color>
+    <color name="colorAccent">#efefef</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="kiteBackgroundBlue">#46c7f2</color>
+
+
+
+    <color name="colorPrimaryTextDefaultMaterialLight">#D6000000</color>
+    <color name="colorSecondaryTextDefaultMaterialLight">#8A000000</color>
+
+    <color name="colorPrimaryTextDefaultMaterialDark">#FFFFFF</color>
+    <color name="colorSecondaryTextDefaultMaterialDark">#B3FFFFFF</color>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_drawer_forum">Forum</string>
+    <string name="nav_drawer_search">Search</string>
+    <string name="nav_drawer_messages">Messages</string>
+    <string name="nav_drawer_profile">Favorites</string>
+    <string name="nav_drawer_settings">Settings</string>
+    <string name="nav_drawer_logout">Logout</string>
+    <string name="nav_drawer_category_misc"> </string>
+
+</resources>

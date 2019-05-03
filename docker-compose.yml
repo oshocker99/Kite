@@ -1,0 +1,52 @@
+version: "3"
+services:
+  lb:
+    image: traefik
+    command: --api --docker
+    ports:
+      - "5000:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./Docker/traefik.toml:/traefik.toml
+  db:
+    restart: always
+    image: postgres:9.6-alpine
+    environment:
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "pass"
+      POSTGRES_DB: "forum_db"
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  api:
+    restart: always
+    image: "koozie/kite:beta"
+    depends_on:
+      - db
+    environment:
+      FLASK_APP: "kite"
+      API_DB_HOST: "db"
+      API_DB_PORT: "5432"
+      API_DB_USERNAME: "admin"
+      API_DB_PASSWORD: "pass"
+      API_DB_NAME: "forum_db"
+      FORUM_ADMIN: "fadmin"
+      FORUM_ADMIN_PASS: "password"
+    ports:
+      - 9000:9000
+    labels:
+      - "traefik.basic.frontend.rule=PathPrefix: /api"
+  chat:
+    restart: always
+    image: "koozie/kite-chat:beta"
+    environment:
+      # Message confirmation should be "true" or null
+      MESSAGE_CONFIRMATION: "true"
+    ports:
+      - 5500:5500
+    labels:
+      - "traefik.basic.frontend.rule=HostRegexp: chat.{subdomain:[a-z0-9.]+}"
+volumes:
+  pgdata:

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_post_favorite"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_menu_favorite"
+        android:iconTint="@color/colorWhite"
+        android:title="favorite"
+        android:visible="true"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/menu_refresh"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_menu_refresh"
+        android:iconTint="@color/colorWhite"
+        android:title="refresh"
+        android:visible="true"
+        app:showAsAction="always" />
+
+
+</menu>

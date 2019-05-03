@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kite</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">{displayname}</string>
+    <string name="nav_header_subtitle">{username}</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="no_fav_posts">"You have not favorited any posts"</string>
+
+</resources>
